@@ -1,0 +1,117 @@
+================================================================================
+                      TF-ALERTER INSTALLATION SUCCESS
+================================================================================
+
+✅ All dependencies have been successfully installed!
+
+================================================================================
+                              QUICK START
+================================================================================
+
+1. INSTALL DEPENDENCIES (one-time setup):
+
+   Windows (Automatic):
+   $ install_dependencies.bat
+
+   OR Manual:
+   $ pip install -r requirements.txt
+
+2. RUN THE APPLICATION:
+
+   $ python main.py
+
+================================================================================
+                           INSTALLED MODULES
+================================================================================
+
+Core GUI:
+  ✓ PyQt6 6.10.2          - Desktop application framework
+  ✓ pillow 12.1.0         - Image processing
+
+Hotkeys & Input:
+  ✓ pynput 1.7.6          - Global hotkey detection
+
+Voice & Text-to-Speech:
+  ✓ pyttsx3 2.90          - System TTS (offline, works without internet)
+  ✓ edge-tts 7.2.7        - Microsoft Edge TTS (online, better quality)
+
+Exchange Integration:
+  ✓ requests 2.32.3       - HTTP API requests for exchange data
+
+Utilities:
+  ✓ qrcode 8.2            - QR code generation
+  ✓ psutil                - System monitoring
+
+================================================================================
+                        TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "ModuleNotFoundError: No module named 'pyttsx3'" or similar
+SOLUTION: 
+  1. Make sure Python 3.10+ is installed
+  2. Run: pip install -r requirements.txt
+  3. Restart VS Code: Ctrl+Shift+P -> "Developer: Reload Window"
+
+PROBLEM: VS Code shows import errors even after installation
+SOLUTION:
+  1. Close and reopen VS Code
+  2. Check Python interpreter is the correct one (bottom right corner)
+  3. Run: python -c "import PyQt6; print('OK')" in terminal
+
+PROBLEM: "Edge TTS не установлен" warning appears but app works
+SOLUTION:
+  - This is normal, Edge-TTS will work when enabled
+  - App will fall back to system TTS if needed
+  - Requires internet connection to work
+
+PROBLEM: "qt.qpa.fonts: DirectWrite error"
+SOLUTION:
+  - This is just a font warning, app will work fine
+  - No action needed
+
+================================================================================
+                          VERIFY INSTALLATION
+================================================================================
+
+Run this command to verify all modules:
+
+$ python -c "import PyQt6; import pyttsx3; import edge_tts; import requests; \
+import pynput; import qrcode; print('✓ All modules OK!')"
+
+Should output: ✓ All modules OK!
+
+================================================================================
+                           FUNDING MONITOR
+================================================================================
+
+The application connects to multiple exchanges:
+
+  ✓ Binance    - Real-time funding rates
+  ✓ Bybit      - Real-time funding rates  
+  ✓ OKX        - Real-time funding rates
+  ✓ Gate.io    - Real-time funding rates
+  ✓ Bitget     - Real-time funding rates
+
+No API keys required for public data!
+
+Test the funding monitor with:
+$ python test_funding.py
+
+================================================================================
+                         NEXT STEPS
+================================================================================
+
+1. Launch the application: python main.py
+
+2. Configure in Settings:
+   - Select which exchanges to monitor
+   - Choose TTS engine (System or Edge TTS)
+   - Set hotkeys for overlay
+
+3. Click "Enable Funding" in the funding tab
+
+4. Monitor funding rates in real-time!
+
+================================================================================
+
+For more details, see SETUP.md
